@@ -1,3 +1,3 @@
 <h1 class="text-3xl font-bold underline ">
-    WELCOME TO CWIZ
+    CONTACT PAGE
 </h1>
