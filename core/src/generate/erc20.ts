@@ -7,8 +7,8 @@ import { generateAlternatives } from './alternatives';
 const booleans = [true, false];
 
 const blueprint = {
-  name: ['MyToken'],
-  symbol: ['MTK'],
+  name: ['FlowTokon'],
+  symbol: ['FT'],
   burnable: booleans,
   snapshots: booleans,
   pausable: booleans,
