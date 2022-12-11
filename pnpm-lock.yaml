@@ -10,6 +10,9 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
+  file-saver: ^2.0.5
+  highlight.js: ^11.7.0
+  highlightjs-solidity: ^2.0.5
   postcss: ^8.4.19
   postcss-cli: ^10.1.0
   prettier: ^2.8.0
@@ -18,15 +21,24 @@ specifiers:
   svelte-check: ^2.9.2
   svelte-preprocess: ^5.0.0
   tailwindcss: ^3.2.4
+  tippy.js: ^6.3.1
   tslib: ^2.4.1
   typescript: ^4.9.3
+  uuid: ^9.0.0
   vite: ^4.0.0
   vitest: ^0.25.3
+
+dependencies:
+  file-saver: 2.0.5
+  highlight.js: 11.7.0
+  highlightjs-solidity: 2.0.5
+  tippy.js: 6.3.7
+  uuid: 9.0.0
 
 devDependencies:
   '@playwright/test': 1.28.1
   '@sveltejs/adapter-auto': 1.0.0-next.90
-  '@sveltejs/kit': 1.0.0-next.581_svelte@3.54.0+vite@4.0.0
+  '@sveltejs/kit': 1.0.0-next.582_svelte@3.54.0+vite@4.0.0
   '@typescript-eslint/eslint-plugin': 5.46.0_5mle7isnkfgjmrghnnczirv6iy
   '@typescript-eslint/parser': 5.46.0_ha6vam6werchizxrnqvarmz2zu
   autoprefixer: 10.4.13_postcss@8.4.19
@@ -351,14 +363,18 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
   /@sveltejs/adapter-auto/1.0.0-next.90:
     resolution: {integrity: sha512-qxH46Oqqn40998wTmnbffONI0HcW/kiZ3OIjZoysjONne+LU4uEsG425MZ2RHDxmR04zxhsdjCAsn6B4du8D7w==}
     dependencies:
       import-meta-resolve: 2.2.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.581_svelte@3.54.0+vite@4.0.0:
-    resolution: {integrity: sha512-BIBJpx4q+MOa1fFuGNhRTIm8wygl8cK6b+Ei/iaG4F1GfqbZkVclrh4p9lGobSXtuXzCBLabe88mvHQ1cd5ZqA==}
+  /@sveltejs/kit/1.0.0-next.582_svelte@3.54.0+vite@4.0.0:
+    resolution: {integrity: sha512-Mt/1QcIHiHxrBLH4iV+pgVXDWOvQKX9iDEUwswRfkt6x72HR1FDeVRKFXS5PBFPGRFLejifGJRN383co7xzumA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1333,6 +1349,10 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
+  /file-saver/2.0.5:
+    resolution: {integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==}
+    dev: false
+
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
@@ -1485,6 +1505,15 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /highlight.js/11.7.0:
+    resolution: {integrity: sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
+  /highlightjs-solidity/2.0.5:
+    resolution: {integrity: sha512-ReXxQSGQkODMUgHcWzVSnfDCDrL2HshOYgw3OlIYmfHeRzUPkfJTUIp95pK4CmbiNG2eMTOmNLpfCz9Zq7Cwmg==}
+    dev: false
 
   /ignore/5.2.1:
     resolution: {integrity: sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==}
@@ -2411,6 +2440,12 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
+  /tippy.js/6.3.7:
+    resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
+    dependencies:
+      '@popperjs/core': 2.11.6
+    dev: false
+
   /to-regex-range/5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -2496,6 +2531,11 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
 
   /vite/3.2.5_@types+node@18.11.12:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
